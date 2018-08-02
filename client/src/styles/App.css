@@ -5,30 +5,65 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 400px;
+	height: 450px;
 	background: rgb(16 4 88);
 	color: rgb(42 100 235);
 }
 
 .title {
-	font-size: 80px;
+	font-size: 85px;
 	font-family: 'Pacifico', cursive;
 	text-align: center;
 }
 
-.input {
-	width: 500px;
-	height: 50px;
+#input {
+	width: 560px;
+	height: 70px;
 	margin-top: 25px;
-	font-size: 24px;
+	font-size: 35px;
 	color: rgb(16 4 88); 
 	background: rgb(42 100 235);
-	padding-left: 60px;
+	padding-left: 20px;
 	font-family: sans-serif;
 	border: none;
 	outline: none;
 }
 
-.input::placeholder {
+#input::placeholder {
 	color: rgb(16 4 88); 
+}
+
+.todoContainer {
+	height: 75px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: sans-serif;
+	border-bottom: 2px solid rgb(42 100 235);
+}
+
+.todoItem {
+	font-size: 30px;
+}
+
+.icons {
+	display: flex;
+}
+
+#check {
+	font-size: 30px;
+	margin-right: 20px;
+}
+
+#trash {
+	font-size: 30px;
+}
+
+.filter {
+	display: flex;
+	justify-content: space-between;
+	font-size: 28px;
+	margin-top: 20px;
+	font-weight: bold;
+	font-family: sans-serif;
 }

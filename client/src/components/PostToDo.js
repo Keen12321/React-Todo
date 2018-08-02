@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+import { addToDo } from '../actions/todoData'
 
 
 class PostToDo extends Component {
@@ -16,24 +16,17 @@ class PostToDo extends Component {
 	handleKeyPress = event => {
 		if (event.key === 'Enter') {
 			event.preventDefault()
-
-			const todo = {
-				name: this.state.name
-			}
-
-			axios.post('http://localhost:3001/todos', {
-				name: name
-			}).then(resp => {
-				
+			addToDo(this.state.name)
+			document.getElementById("input").value = "";
+			this.setState({
+				name: ''
 			})
 		}
 	}
 
  	render() {
    	return (
-   		<div>
- 				<input className="input" type="text" onChange={this.handleChange} onKeyPress={this.handleKeyPress} placeholder="Do the dishes..."/>
- 			</div>
+	 		<input id="input" type="text" onChange={this.handleChange} onKeyPress={this.handleKeyPress} placeholder="Do the dishes..."/>
    	)
  	}
 }
